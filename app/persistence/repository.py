@@ -25,7 +25,7 @@ class IRepository(ABC):
         ...
 
 class MemoryRepository(IRepository):
-    async def __init__(self, model):
+    def __init__(self, model):
         self.model = model
 
     async def get_all(self, session: AsyncSession):

@@ -2,9 +2,10 @@ from fastapi import FastAPI
 from sqlalchemy import create_engine
 from sqlmodel import SQLModel
 from app.api.v1.endpoint.auth import route as auth_ns
+from app.api.v1.endpoint.todo import route as todo_ns
 
 app = FastAPI()
-MySQL = 'mysql://root:M3tin190534@localhost/Todo_List'
+MySQL = 'mysql+pymysql://root:M3tin190534@localhost/Todo_List'
 
 engine = create_engine(MySQL, echo=True)
 
