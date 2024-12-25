@@ -5,3 +5,4 @@ class ToDoModel(BaseModel):
     id: UUID | None = None
     title: str
     description: str
+    owner_id: UUID | None = None
